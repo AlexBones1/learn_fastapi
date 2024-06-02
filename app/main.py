@@ -11,7 +11,7 @@ SECRET_KEY = 'secret'
 ALGORITHM = "HS256"
 
 app = FastAPI(title=title)
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")  # В этом месте парсится хэдер на Authorization
 
 
 class User(BaseModel):
